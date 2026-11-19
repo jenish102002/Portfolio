@@ -1,0 +1,122 @@
+%-------------------------
+% One-Page ATS-Optimized Resume — AI Engineer
+%-------------------------
+\documentclass[a4paper,10pt]{article}
+\usepackage[top=0.38in, bottom=0.38in, left=0.55in, right=0.55in]{geometry}
+\usepackage{titlesec}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{enumitem}
+\usepackage[colorlinks=true, linkcolor=blue, urlcolor=blue, citecolor=blue]{hyperref}
+\usepackage[english]{babel}
+\input{glyphtounicode}
+\usepackage[T1]{fontenc}
+\usepackage{charter}
+\pagestyle{plain}
+\pagenumbering{gobble}
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+\pdfgentounicode=1
+\titleformat{\section}{\large\raggedright\bfseries}{}{0em}{}[\vspace{2pt}\titlerule]
+\titlespacing{\section}{0pt}{4pt}{2pt}
+\newcommand{\resumeItem}[1]{\item\small{#1}}
+\newcommand{\resumeSubheading}[4]{
+  \item[]
+  \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & #2 \\
+    \textit{\small #3} & \textit{\small #4} \\
+  \end{tabular*}\vspace{-1pt}
+}
+\newcommand{\resumeProjectHeading}[2]{
+  \item[]
+  \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & \textit{\small #2} \\
+  \end{tabular*}\vspace{-1pt}
+}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0pt, label={}, itemsep=3pt, topsep=1pt]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.2in, itemsep=1pt, topsep=1pt]}
+\newcommand{\resumeItemListEnd}{\end{itemize}}
+\begin{document}
+\begin{center}
+    {\LARGE \textbf{Jenish Jagdishkumar Patel}}\\[4pt]
+    \small
+    \href{mailto:jenish.patel00015@gmail.com}{jenish.patel00015@gmail.com}
+    \enspace$|$\enspace +91 93280 77721 \\[3pt]
+    \href{https://www.linkedin.com/in/jenish102002/}{linkedin.com/in/jenish102002}
+    \enspace$|$\enspace
+    \href{https://github.com/jenish102002}{github.com/jenish102002}
+\end{center}
+\section{SUMMARY}
+\small{
+AI Engineer with an M.Tech in Computer Science, specializing in Retrieval-Augmented Generation (RAG) and multi-agent LLM systems. Built an internal RAG support chatbot at Intel with incremental document sync and confidence-based escalation, and deployed RAG and LangGraph applications end to end. Proficient in Python, FastAPI, LangChain, LangGraph, and vector databases.
+}
+\section{TECHNICAL SKILLS}
+\begin{itemize}[leftmargin=0.15in, label={}, itemsep=1pt, topsep=1pt]
+\small{
+\item \textbf{Generative AI \& LLMs:} Large Language Models (LLMs), Prompt Engineering, Retrieval-Augmented Generation (RAG), Multi-Agent Systems, Function Calling / Tool Use, LLM APIs (OpenAI, Claude, Gemini), Local LLMs (Ollama)
+\item \textbf{Frameworks \& Libraries:} LangChain, LangGraph, Hugging Face Transformers, PyTorch, Scikit-learn
+\item \textbf{RAG \& Vector Search:} Qdrant, FAISS, Embeddings, Semantic \& Hybrid Search, Chunking Strategies, Incremental Indexing, Confidence Thresholding, Maximum Marginal Relevance (MMR)
+\item \textbf{Backend \& Deployment:} Python, FastAPI, REST APIs, SQL, Docker, Git, CI/CD (GitHub Actions), AWS EC2, Linux, React, Streamlit
+}
+\end{itemize}
+\section{WORK EXPERIENCE}
+\resumeSubHeadingListStart
+\resumeSubheading
+  {Intel Corporation}{June 2025 -- May 2026}
+  {Graduate Software Intern}{Bengaluru, India}
+\resumeItemListStart
+\resumeItem{Built an internal \textbf{RAG-based support chatbot} that guides employees on process and documentation queries, with answers grounded in retrieved source content.}
+\resumeItem{Developed an automated \textbf{ingestion service} with \textbf{incremental sync} that detects added and removed documents in a shared repository, generates \textbf{embeddings}, and updates the vector database without full re-indexing.}
+\resumeItem{Implemented a \textbf{confidence-score threshold (0.6)}: low-confidence queries are not answered and the user is routed to raise a ticket with the appropriate owning team, reducing the risk of incorrect answers.}
+\resumeItem{Developed secure \textbf{REST APIs} serving 15+ internal teams and built dashboards that reduced manual reporting by approximately 20 hours per week; received the \textbf{Intel Quarterly Recognition Award}.}
+\resumeItemListEnd
+\resumeSubheading
+  {ISRO -- Space Applications Centre (SAC)}{December 2022 -- May 2023}
+  {Research Intern}{Ahmedabad, India}
+\resumeItemListStart
+\resumeItem{Built a full-stack inventory management system with \textbf{REST APIs} and a \textbf{MySQL} database, replacing paper audits and reducing manual tracking time by 30\%.}
+\resumeItem{Automated report and document generation, saving approximately 10 hours of paperwork weekly.}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+\section{GENERATIVE AI PROJECTS}
+\resumeSubHeadingListStart
+\resumeProjectHeading
+  {\textbf{DocMind -- Multi-PDF Question-Answering Platform} \href{https://github.com/jenish102002/DocMind}{\underline{[GitHub]}} \href{https://docmind-3hi.pages.dev}{\underline{[Live]}}}{March 2026 -- May 2026}
+\resumeItemListStart
+  \resumeItem{Engineered an end-to-end \textbf{RAG pipeline} for multi-PDF question-answering: \textbf{PyMuPDF} text extraction, semantic chunking, \textbf{OpenAI embeddings}, and a \textbf{Qdrant} vector store for low-latency retrieval.}
+  \resumeItem{Applied \textbf{Maximum Marginal Relevance (MMR)} retrieval and prompt engineering to ground responses in source context, reducing hallucinations and improving answer relevance.}
+  \resumeItem{Implemented real-time \textbf{streaming LLM responses} (SSE) over a \textbf{FastAPI} backend with \textbf{JWT authentication} and a \textbf{React} frontend.}
+  \resumeItem{Deployed to \textbf{AWS EC2} with \textbf{Docker Compose} (Redis, Qdrant) and \textbf{GitHub Actions CI/CD} for automated deploys.}
+\resumeItemListEnd
+\resumeProjectHeading
+  {\textbf{FinAgent AI -- Multi-Agent Financial System} \href{https://github.com/jenish102002/FinAgent-AI-Multi-Agent-Financial-Intelligence-System}{\underline{[GitHub]}} \href{https://fin-agent-ai-multi-agent-financial.vercel.app}{\underline{[Live]}}}{April 2026 -- June 2026}
+\resumeItemListStart
+\resumeItem{Developed a \textbf{LangGraph}-based Python application coordinating four AI agents to assess credit risk, fraud, and compliance.}
+\resumeItem{Built an intent-based routing layer that interprets user queries and directs each request to the appropriate agent.}
+\resumeItem{Integrated a \textbf{FAISS vector database} to supply the advisory agent with live market data for accurate, current responses.}
+\resumeItemListEnd
+\resumeProjectHeading
+  {\textbf{EEG Brainwave Decoding -- M.Tech Thesis}}{July 2025 -- June 2026}
+\resumeItemListStart
+\resumeItem{Built a Python ML pipeline to decode imagined words from EEG signals, using signal cleaning and feature selection to reduce overfitting.}
+\resumeItem{Trained a \textbf{Random Forest} classifier (87\% accuracy) and a \textbf{Logistic Regression} model (43\% accuracy vs. 25\% baseline).}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+\section{EDUCATION}
+\resumeSubHeadingListStart
+\resumeSubheading
+  {Sardar Vallabhbhai National Institute of Technology (SVNIT)}{July 2024 -- July 2026}
+  {Master of Technology (M.Tech) in Computer Science and Engineering \textbf{-- CGPA: 8.69 / 10}}{Surat, India}
+\resumeSubheading
+  {Dharmsinh Desai University (DDU)}{July 2019 -- May 2023}
+  {Bachelor of Technology (B.Tech) in Information Technology \textbf{-- CPI: 8.37 / 10}}{Nadiad, India}
+\resumeSubHeadingListEnd
+\section{CERTIFICATIONS}
+\begin{itemize}[leftmargin=0.2in, itemsep=0pt, topsep=1pt]
+\small{
+\item Completed the \textbf{Responsible AI} certification from \textbf{NPTEL}, covering ethical AI, data privacy, and secure model development.
+}
+\end{itemize}
+\end{document}
